@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<style>
+    td,th
+    {border:1px solid black;}
+    table
+    {border:1px solid black;}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022 Advanced Level Results</title>
+    
+</head>
+<body>
+    <header id="main">
+        <div class="lo">
+            <p>2022 Advanced Level Results</p>
+        </div>
+    </header>
+    Enter details:<input type="text" id="info">
+    <button onclick="getinfo()">Search</button><br><br>
+    <table>
+        <tr>
+            <th>ID Number</th>
+            <th>Exam Number</th>
+            <th>Name</th>
+        </tr>
+        <tr id="ReqInfo">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <p id="ReqInfo"></p>
+    <script>
+        function getinfo(){
+            var x=document.getElementById('info').value;
+            document.getElementById('ReqInfo').innerHTML=x;
+            if (x/1==x){
+                document.getElementById('main').style.color="green";
+            }
+            else{
+                document.getElementById('main').style.color="red";
+            }
+        }
+    </script>
+</body>
+</html>
